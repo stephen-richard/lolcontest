@@ -1,0 +1,147 @@
+/*-------------------------------------- 
+				Reset Part
+----------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/*-------------------------------------- 
+				General
+----------------------------------------*/
+
+/*Colors 
+
+Dark blue = #1a2530;
+Mid blue = #2c3e50;
+Light blue = #34495e;
+Orange = #e74c3c;
+White = #ffffff;*/
+
+html {position: absolute; width: 100%;font-family: Myriad pro;}
+h1 {color:#1a2530;}
+
+/*-------------------------------------- 
+				Header
+----------------------------------------*/
+
+header {width:100%;background: #2c3e50;position: relative;padding: 20px;}
+header ul {margin: auto; max-width: 80%; text-align: center;}
+header ul li {display: inline-block;margin-right: 20px;}
+header ul li a {color: #ffffff; text-decoration: none;}
+
+
+/*-------------------------------------- 
+				Content
+----------------------------------------*/
+
+.content {width: 80%;margin: auto;margin-top: 50px;}
+.content h1 {margin: auto; max-width: 200px;text-align: center;margin-bottom: 40px;}
+.content .search {position: relative;width: 60%;box-sizing:border-box;margin: auto;padding:30px;background: #2c3e50;}
+.content .search form { margin: auto;}
+.content .search #summoner-name {width: 60%;height: 40px; border: 0; border-radius: 2px;}
+.content .search input[type=submit] {width: 30%; height: 40px;border-radius: 2px;border: 0;background: #e74c3c;}
+
+
+/*-------------------------------------- 
+				Match List
+----------------------------------------*/
+
+.content .game-stats .match {margin-bottom:10px;background: #34495e;color: #ffffff;}
+.content .game-stats .match .game-general {background: #2c3e50;padding:10px;}
+.content .game-stats .match .game-general ul {text-align: center;}
+.content .game-stats .match .game-general ul li {display: inline-block;margin-right: 12%;vertical-align: top;}
+.content .game-stats .match .game-general ul li p {text-transform: uppercase;}
+.content .game-stats .match .game-general ul li p:nth-child(2) {color: #e74c3c;}
+.content .game-stats .match .game-general ul li p.win {color: #27ae60;}
+
+.content .game-stats .match .game-details {padding: 10px;}
+.content .game-stats .match .game-details ul li {display: inline-block; margin-right: 30px;vertical-align: top;}
+
+.content .game-stats .match .hidden {display: none;}
+.content .game-stats .match .visible {display: block;}
+
+.content .game-stats .match .game-players {padding:10px;}
+.content .game-stats .match .game-players a {display: block; color: #e74c3c;}
+.content .game-stats .match .game-players a.with {display: inline-block;width: 100px;margin-right: 40px;}
+.content .game-stats .match .game-players a.versus {}
+
+/*-------------------------------------- 
+			Summoner seasons stats
+----------------------------------------*/
+
+.content #game-stats .mode-stats {margin-bottom:10px;padding-bottom:10px;background: #34495e;color: #ffffff;}
+.content #game-stats .mode-stats .game-mode {width: 100%;text-align: center;background: #e74c3c;padding: 10px 0px 10px 0px;}
+
+.content #game-stats .mode-stats .ratio,.season-details {margin: 10px 0px 10px 0px;}
+.content #game-stats .mode-stats .ratio div {display: inline-block;width: 49%;text-align: center;}
+.content #game-stats .mode-stats .ratio .difference {width: 100%; text-align: center;margin: 20px 0px 10px 0px;}
+
+/* Progress bar */
+.content #game-stats .mode-stats .ratio .difference progress[value] {-webkit-appearance: none; appearance: none;width: 250px;height: 20px;}
+.content #game-stats .mode-stats .ratio .difference progress[value]::-webkit-progress-bar {-webkit-appearance: none; appearance: none;width: 250px;height: 20px;}
+.content #game-stats .mode-stats .ratio .difference progress[value]::-webkit-progress-value {-webkit-appearance: none; appearance: none;width: 250px;height: 20px;}  
+.content #game-stats .mode-stats .ratio .difference progress[value]::-moz-progress-bar {-webkit-appearance: noneappearance: none;width: 250px;height: 20px;}
+.progress-bar > span {background-color: blue;border-radius: 2px;display: block;text-indent: -9999px;}
+.content #game-stats .mode-stats .season-details ul li {display: inline-block;width: 49%;text-align: center;margin-bottom: 30px;}
+
+
+/*-------------------------------------- 
+			Challenger ranking
+----------------------------------------*/
+
+.content .player {color: #ffffff;background: #2c3e50;margin-bottom: 10px;padding: 10px;}
+.content .player ul li {display: inline-block;width: 49%;}
+.content .player ul li:nth-child(-n+1) {color: #e74c3c;}
+.content .player ul li:nth-child(2) {/*text-align: center;*/}
+.content .player ul li a {color: #e74c3c; margin-right: 20px;}
+.content .player ul li p {display: inline-block; margin-right: 10px;}
+.content .player ul li p:nth-child(3) {float:right;padding-right: 40px;}
+.content .player ul li p.win {color: #27ae60;}
+.content .player ul li p.losses {color: #e74c3c;}
+.content .player ul li p.new-player {}
+
+/*-------------------------------------- 
+				Media queries
+----------------------------------------*/
+
+@media screen and (max-width:968px){
+
+	.content .game-stats .match .game-general ul li {margin-right: 5%;}
+
+	.content .search #summoner-name {width: 100%;margin-bottom: 20px;}
+	.content .search input[type=submit] {display: block; width: 100%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
